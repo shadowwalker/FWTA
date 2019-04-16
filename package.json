@@ -1,0 +1,9 @@
+{
+  "name": "fwta",
+  "version": "1.0.0",
+  "description": "A vision to create cross-platform mobile first application.",
+  "main": "index.js",
+  "repository": "git@github.com:shadowwalker/FWTA.git",
+  "author": "Wei Wang <weiwio@outlook.com>",
+  "license": "MIT"
+}
