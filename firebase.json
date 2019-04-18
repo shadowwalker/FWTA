@@ -1,0 +1,40 @@
+{
+  "hosting": {
+    "public": "dist/public",
+    "ignore": [],
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "headers": [{
+      "source": "**/*.@(eot|otf|ttc|ttf|woff|woff2|font.css|ico)",
+      "headers": [{
+        "key": "Cache-Control",
+        "value": "private, max-age=604800, stale-while-revalidate=2592000"
+      }]
+    }, {
+      "source": "**/*.@(jpg|jpeg|gif|png|svg|ico)",
+      "headers": [{
+        "key": "Cache-Control",
+        "value": "private, max-age=86400, stale-while-revalidate=604800"
+      }]
+    }, {
+      "source": "**/*.@(js)",
+      "headers": [{
+        "key": "Cache-Control",
+        "value": "private, max-age=86400, stale-while-revalidate=604800"
+      }]
+    }],
+    "rewrites": [
+      {
+        "source": "/",
+        "function": "IndexPage"
+      },
+      {
+        "source": "**/**",
+        "function": "ErrorPage"
+      }
+    ]
+  },
+  "functions": {
+    "source": "dist/functions"
+  }
+}

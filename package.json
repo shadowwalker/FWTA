@@ -6,15 +6,25 @@
   "repository": "git@github.com:shadowwalker/FWTA.git",
   "author": "Wei Wang <weiwio@outlook.com>",
   "license": "MIT",
+  "engines": {
+    "node": "8"
+  },
   "scripts": {
     "dev": "next src/app",
-    "build": "next build src/app",
-    "cpy-functions": "cpy src/functions/**/* dist/functions"
+    "build": "run-s clean build:**",
+    "build:app": "next build src/app",
+    "release": "run-s build release:**",
+    "release:firebase": "node scripts/release.js",
+    "deploy": "run-s release deploy:**",
+    "deploy:firebase": "firebase deploy",
+    "clean": "node scripts/clean.js"
   },
   "devDependencies": {
-    "cpy-cli": "^2.0.0",
+    "cpy": "^7.2.0",
+    "del": "^4.1.0",
     "firebase-tools": "^6.6.0",
     "next": "^8.0.4",
+    "npm-run-all": "^4.1.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },

@@ -1,4 +1,6 @@
 const functions = require('firebase-functions')
-const indexPage = require('./next/serverless/pages/index')
+const indexPage = require('./pages/index')
+const errorPage = require('./pages/_error')
 
-exports.App = functions.https.onRequest((req, res) => indexPage.render(req, res))
+exports.IndexPage = functions.https.onRequest((req, res) => indexPage.render(req, res))
+exports.ErrorPage = functions.https.onRequest((req, res) => errorPage.render(req, res))
