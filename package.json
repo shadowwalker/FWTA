@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next src/app",
-    "build": "next build/app"
+    "build": "next src/app"
   },
   "devDependencies": {
     "next": "^8.0.4",
