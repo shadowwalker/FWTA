@@ -8,11 +8,18 @@
   "license": "MIT",
   "scripts": {
     "dev": "next src/app",
-    "build": "next build src/app"
+    "build": "next build src/app",
+    "cpy-functions": "cpy src/functions/**/* dist/functions"
   },
   "devDependencies": {
+    "cpy-cli": "^2.0.0",
+    "firebase-tools": "^6.6.0",
     "next": "^8.0.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "firebase-admin": "^7.3.0",
+    "firebase-functions": "^2.2.1"
   }
 }
