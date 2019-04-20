@@ -53,6 +53,9 @@ export default class extends Document {
               max-width: 600px;
               margin: 0 auto;
             }
+            #__next::-webkit-scrollbar {
+              display: none;
+            }
             `
           }</style>
         </Head>
