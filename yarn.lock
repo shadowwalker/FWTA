@@ -4405,7 +4405,7 @@ hmac-drbg@^1.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@^3.2.1:
+hoist-non-react-statics@^3.2.1, hoist-non-react-statics@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
   integrity sha512-0XsbTXxgiaCDYDIWFcwkmerZPSwywfUqYmwT4jzewKTQSWoE6FCMoUVOeBJWK3E/CrWbxRG3m5GzY4lnIwGRBA==
@@ -8185,6 +8185,13 @@ unset-value@^1.0.0:
   dependencies:
     has-value "^0.3.1"
     isobject "^3.0.0"
+
+unstated-typescript@^2.1.6:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/unstated-typescript/-/unstated-typescript-2.1.6.tgz#a6d308980308f262d975ac4c1819feaf48d67b54"
+  integrity sha512-eksimyosws0YTkIoF03/68wyPSR5M98MgnXaLyD2fHbZ25SMMRILznwnPhmYD2hr/mbgs2j8jxYauPOMNBYJLw==
+  dependencies:
+    hoist-non-react-statics "^3.3.0"
 
 unzip-response@^2.0.1:
   version "2.0.1"
