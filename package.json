@@ -24,6 +24,7 @@
     "firebase-functions": "^2.2.1"
   },
   "devDependencies": {
+    "@zeit/next-typescript": "^1.1.1",
     "cpy": "^7.2.0",
     "del": "^4.1.0",
     "firebase-tools": "^6.6.0",
