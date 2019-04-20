@@ -16,7 +16,6 @@ export default class extends Document {
     return (
       <html lang='en' dir='ltr'>
         <Head>
-          <meta charSet='utf-8' />
           <meta name='application-name' content='FWTA' />
           <meta name='apple-mobile-web-app-capable' content='yes' />
           <meta name='apple-mobile-web-app-status-bar-style' content='default' />
@@ -27,7 +26,7 @@ export default class extends Document {
           <meta name='msapplication-config' content='/static/icons/browserconfig.xml' />
           <meta name='msapplication-TileColor' content='#2B5797' />
           <meta name='msapplication-tap-highlight' content='no' />
-          <meta name='theme-color' content='#FFFFFF' />
+          <meta name='theme-color' content='#FAFAFA' />
           <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover' />
           
           <link rel='apple-touch-icon' sizes='180x180' href='/static/icons/apple-touch-icon.png' />
@@ -41,13 +40,17 @@ export default class extends Document {
           <meta name='twitter:card' content='FWTA' />
           <meta name='twitter:site' content='@DavidWShadow' />
           <meta property='og:type' content='website' />
+          <meta property='og:title' content='FWTA' />
+          <meta property='og:description' content='FWTA is a project embraces the vision to create cross-platform mobile first applications using morden web technologies and best practices.' />
           <meta property='og:site_name' content='FWTA' />
+          <meta property='og:url' content='https://fwta.weiw.io' />
           <meta property='og:image' content='/static/icons/apple-touch-icon.png' />
           <style>{
             `
             html, body, #__next {
               height: 100%;
               overflow-x: hidden;
+              background-color: #FFFFFF;
             }
             #__next {
               max-width: 600px;

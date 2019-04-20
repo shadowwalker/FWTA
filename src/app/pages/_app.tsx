@@ -1,6 +1,8 @@
 import MUI from 'next-mui'
 import App, { Container } from 'next/app'
 import Head from 'next/head'
+import { Provider } from 'unstated-typescript'
+import Layout from '../components/Layout'
 
 export default class extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -21,7 +23,11 @@ export default class extends App {
           <title>FWTA</title>
         </Head>
         <MUI>
-          <Component {...pageProps}/>
+          <Provider>
+            <Layout>
+              <Component {...pageProps}/>
+            </Layout>
+          </Provider>
         </MUI>
       </Container>
     )
