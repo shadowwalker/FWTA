@@ -26,7 +26,7 @@ export default class extends Document {
           <meta name='msapplication-config' content='/static/icons/browserconfig.xml' />
           <meta name='msapplication-TileColor' content='#2B5797' />
           <meta name='msapplication-tap-highlight' content='no' />
-          <meta name='theme-color' content='#FAFAFA' />
+          <meta name='theme-color' content='#FFFFFF' />
           <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover' />
           
           <link rel='apple-touch-icon' sizes='180x180' href='/static/icons/apple-touch-icon.png' />
@@ -50,11 +50,11 @@ export default class extends Document {
             html, body, #__next {
               height: 100%;
               overflow-x: hidden;
-              background-color: #FFFFFF;
             }
             #__next {
               max-width: 600px;
               margin: 0 auto;
+              background-color: #FFFFFF;
             }
             #__next::-webkit-scrollbar {
               display: none;
@@ -65,6 +65,7 @@ export default class extends Document {
         <body>
           <Main />
           <NextScript />
+          {/*<script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js" />*/}
         </body>
       </html>
     )
