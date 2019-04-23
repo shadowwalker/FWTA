@@ -27,9 +27,9 @@ if (!process.env.FUNCTION_NAME || process.env.FUNCTION_NAME === 'FeedPage') {
   exports['FeedPage'] = functions.https.onRequest((req, res) => feedPage.render(req, res))
 }
 
-if (!process.env.FUNCTION_NAME || process.env.FUNCTION_NAME === 'mePage') {
+if (!process.env.FUNCTION_NAME || process.env.FUNCTION_NAME === 'MePage') {
   if (!mePage) mePage = require('./pages/me')
-  exports['mePage'] = functions.https.onRequest((req, res) => mePage.render(req, res))
+  exports['MePage'] = functions.https.onRequest((req, res) => mePage.render(req, res))
 }
 
 if (!process.env.FUNCTION_NAME || process.env.FUNCTION_NAME === 'ErrorPage') {

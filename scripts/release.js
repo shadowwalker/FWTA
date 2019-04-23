@@ -6,3 +6,6 @@ cpy(['static/**/*'], path.resolve(__dirname, '..', 'dist/public'), { cwd: 'src/a
 cpy(['pages/**/*'], path.resolve(__dirname, '..', 'dist/functions'), { cwd: 'src/app/.next/serverless', parents: true })
 cpy(['functions/**/*'], path.resolve(__dirname, '..', 'dist'), { cwd: 'src', parents: true })
 cpy(['package.json'], path.resolve(__dirname, '..', 'dist/functions'), { parents: true })
+
+// PWA
+cpy(['precache-manifest.*.js', 'sw.js'], path.resolve(__dirname, '..', 'dist/public'), { cwd: 'src/app/.next', parents: true })

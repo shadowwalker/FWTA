@@ -37,14 +37,18 @@ export default class extends Document {
           <link rel='shortcut icon' href='/static/icons/favicon.ico' />
           <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' />
      
-          <meta name='twitter:card' content='FWTA' />
-          <meta name='twitter:site' content='@DavidWShadow' />
+          <meta name='twitter:card' content='summary' />
+          <meta name='twitter:url' content='https://fwta.weiw.io' />
+          <meta name='twitter:title' content='FWTA' />
+          <meta name='twitter:description' content='FWTA is a project embraces the vision to create cross-platform mobile first applications using morden web technologies and best practices.' />
+          <meta name='twitter:image' content='https://fwta.weiw.io/static/icons/android-chrome-192x192.png' />
+          <meta name='twitter:creator' content='@DavidWShadow' />
           <meta property='og:type' content='website' />
           <meta property='og:title' content='FWTA' />
           <meta property='og:description' content='FWTA is a project embraces the vision to create cross-platform mobile first applications using morden web technologies and best practices.' />
           <meta property='og:site_name' content='FWTA' />
           <meta property='og:url' content='https://fwta.weiw.io' />
-          <meta property='og:image' content='/static/icons/apple-touch-icon.png' />
+          <meta property='og:image' content='https://fwta.weiw.io/static/icons/apple-touch-icon.png' />
           <style>{
             `
             html, body, #__next {
