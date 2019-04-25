@@ -54,6 +54,7 @@ export default class extends Document {
             html, body, #__next {
               height: 100%;
               overflow-x: hidden;
+              overscroll-behavior-y: none;
             }
             #__next {
               max-width: 600px;
