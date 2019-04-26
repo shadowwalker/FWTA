@@ -3,6 +3,7 @@ import App, { Container } from 'next/app'
 import Head from 'next/head'
 import { Provider } from 'unstated-typescript'
 import Layout from '../components/Layout'
+import { SnackbarProvider } from 'notistack'
 
 export default class extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -23,11 +24,24 @@ export default class extends App {
           <title>FWTA</title>
         </Head>
         <MUI>
-          <Provider>
-            <Layout>
-              <Component {...pageProps}/>
-            </Layout>
-          </Provider>
+          <SnackbarProvider 
+            maxSnack={1}
+            preventDuplicate
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'center',
+            }}
+            transitionDuration={{ 
+              exit: 200,
+              enter: 200 
+            }}
+          >
+            <Provider>
+              <Layout>
+                <Component {...pageProps}/>
+              </Layout>
+            </Provider>
+          </SnackbarProvider>
         </MUI>
       </Container>
     )

@@ -2668,6 +2668,11 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
+classnames@^2.2.6:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
+  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
+
 clean-webpack-plugin@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/clean-webpack-plugin/-/clean-webpack-plugin-2.0.1.tgz#2241526b0030aa0249e78714471298f867fc2829"
@@ -6249,10 +6254,10 @@ next-mui@^1.0.9:
     jss "^9.8.7"
     styled-jsx "^3.2.1"
 
-next-pwa@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/next-pwa/-/next-pwa-1.0.0.tgz#5a43bdc251ee4917794716108317188205e3fdc0"
-  integrity sha512-kVqSN9T554yScAz3eb6/HxqWZfQAhcA3k/Z8VTLgXVZCMptOyAy/yw7aaYK2JsAUXKQG8x7CLfJTn4CuNh1SMQ==
+next-pwa@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/next-pwa/-/next-pwa-1.0.1.tgz#c15394665fd064d72584ebaed6ccb9d94630f11b"
+  integrity sha512-PVZ6zGzU3oZtjJeQQT0SUo8dU0tmyCmQpkqSH8izUQvaNTVF+eQQeWeQ9BFYeeN4vVbUEaiF7rtCETQPTH/PFg==
   dependencies:
     clean-webpack-plugin "^2.0.1"
     replace-in-file-webpack-plugin "^1.0.6"
@@ -6460,6 +6465,16 @@ normalize-url@2.0.1:
     prepend-http "^2.0.0"
     query-string "^5.0.1"
     sort-keys "^2.0.0"
+
+notistack@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/notistack/-/notistack-0.8.1.tgz#6c53eed947c01008918f91abbd7e50773a69fb69"
+  integrity sha512-oAKHeyfBmnzsRMs1ap/xEGzD2UP4tCwgZCs/nPaDalqmN3iV649auPfDwkFRuSqXojpjiC133q37fWP1SYXOCg==
+  dependencies:
+    classnames "^2.2.6"
+    hoist-non-react-statics "^3.3.0"
+    prop-types "^15.6.2"
+    react-is "^16.8.6"
 
 npm-bundled@^1.0.1:
   version "1.0.6"
@@ -7268,7 +7283,7 @@ react-event-listener@^0.6.6:
     prop-types "^15.6.0"
     warning "^4.0.1"
 
-react-is@16.8.6, react-is@^16.7.0, react-is@^16.8.0, react-is@^16.8.1:
+react-is@16.8.6, react-is@^16.7.0, react-is@^16.8.0, react-is@^16.8.1, react-is@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
