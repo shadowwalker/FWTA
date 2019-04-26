@@ -6249,10 +6249,10 @@ next-mui@^1.0.9:
     jss "^9.8.7"
     styled-jsx "^3.2.1"
 
-next-pwa@^0.0.15:
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/next-pwa/-/next-pwa-0.0.15.tgz#50b47f24272793c0faa412041dfcb268b0a0a648"
-  integrity sha512-wXZya62IClpOoB5fUTW/kkV0BNg/aEbFi0Xtr40x0uYfal1kCzggVxT5KGJZcWimuI3HDAcSg1Hmsjy7JqR+cg==
+next-pwa@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/next-pwa/-/next-pwa-1.0.0.tgz#5a43bdc251ee4917794716108317188205e3fdc0"
+  integrity sha512-kVqSN9T554yScAz3eb6/HxqWZfQAhcA3k/Z8VTLgXVZCMptOyAy/yw7aaYK2JsAUXKQG8x7CLfJTn4CuNh1SMQ==
   dependencies:
     clean-webpack-plugin "^2.0.1"
     replace-in-file-webpack-plugin "^1.0.6"
