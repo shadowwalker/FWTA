@@ -33,16 +33,16 @@
         "function": "ExplorePage"
       },
       {
-        "source": "/new",
-        "function": "NewPage"
-      },
-      {
         "source": "/feed",
         "function": "FeedPage"
       },
       {
+        "source": "/user/*",
+        "function": "UserPage"
+      },
+      {
         "source": "/me",
-        "function": "MePage"
+        "function": "UserPage"
       },
       {
         "source": "**/**",

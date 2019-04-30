@@ -8671,10 +8671,10 @@ unset-value@^1.0.0:
     has-value "^0.3.1"
     isobject "^3.0.0"
 
-unstated-typescript@^2.1.6:
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/unstated-typescript/-/unstated-typescript-2.1.6.tgz#a6d308980308f262d975ac4c1819feaf48d67b54"
-  integrity sha512-eksimyosws0YTkIoF03/68wyPSR5M98MgnXaLyD2fHbZ25SMMRILznwnPhmYD2hr/mbgs2j8jxYauPOMNBYJLw==
+unstated-typescript@^2.1.7:
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/unstated-typescript/-/unstated-typescript-2.1.7.tgz#1e96b4b4f1b6c8c2b8143bc4d127b11f06440f92"
+  integrity sha512-SIRDIOMjUr++Uj0ibUcJjPKdwR03RcbIOwaefI8eJgB68ufJ30SjGbTOVXrOe4BYwNiIpVOSKjOX2yWFsMBZQA==
   dependencies:
     hoist-non-react-statics "^3.3.0"
 

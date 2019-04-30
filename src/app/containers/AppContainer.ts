@@ -4,26 +4,26 @@ import 'firebase/auth'
 import 'firebase/firestore'
 import { User } from 'firebase'
 
-const isBrowser = typeof window !== 'undefined'
+const isBrowser = (process as any).browser || typeof window !== 'undefined'
 
 interface State {
   isOffline: boolean
+  isInitialized: boolean
   user?: User
 }
 
-export default class extends Container<State> {
+export default class AppContainer extends Container<State> {
   state: State = {
-    isOffline: (isBrowser && !navigator.onLine) ? true : false
+    isOffline: !isBrowser ? false : !navigator.onLine,
+    isInitialized: !isBrowser ? false : firebase.apps.length > 0
   }
 
   init = () => {
-    if (isBrowser) {
-      if (!firebase.apps.length) {  // not initialized
-        firebase.initializeApp({
-          projectId: process.env.FIREBASE_PROJECT_ID,
-          apiKey: process.env.FIREBASE_WEB_API_KEY
-        })
-      }
+    if (isBrowser && !this.state.isInitialized) {
+      firebase.initializeApp({
+        projectId: process.env.FIREBASE_PROJECT_ID,
+        apiKey: process.env.FIREBASE_WEB_API_KEY
+      })
       
       firebase.auth().onAuthStateChanged(user => {
         if (user){
@@ -40,6 +40,12 @@ export default class extends Container<State> {
       window.addEventListener('offline', e => {
         this.setState({isOffline: true})
       })
+
+      setTimeout(() => {
+        this.setState({isInitialized: true})
+      }, 2000)
     }
+
+    return this
   }
 }

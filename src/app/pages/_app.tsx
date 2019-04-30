@@ -1,9 +1,16 @@
-import MUI from 'next-mui'
 import App, { Container } from 'next/app'
 import Head from 'next/head'
-import { Provider } from 'unstated-typescript'
-import Layout from '../components/Layout'
 import { SnackbarProvider } from 'notistack'
+import { Provider } from 'unstated-typescript'
+import MUI from 'next-mui'
+import AppContainer from '../containers/AppContainer'
+import Shell from '../components/Shell'
+import Layout from '../components/Layout'
+
+const appContainer  = new AppContainer().init()
+
+// TODO:
+//   - custom MUI theme
 
 export default class extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -18,31 +25,30 @@ export default class extends App {
   
   render () {
     const { Component, pageProps } = this.props
+
     return (
       <Container>
         <Head>
           <title>FWTA</title>
         </Head>
-        <MUI>
-          <SnackbarProvider 
-            maxSnack={1}
-            preventDuplicate
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'center',
-            }}
-            transitionDuration={{ 
-              exit: 200,
-              enter: 200 
-            }}
-          >
-            <Provider>
-              <Layout>
-                <Component {...pageProps}/>
-              </Layout>
-            </Provider>
-          </SnackbarProvider>
-        </MUI>
+        <Provider inject={[appContainer]}>
+          <MUI>
+            <SnackbarProvider 
+              maxSnack={1}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'center',
+              }}
+              preventDuplicate
+            >
+              <Shell>
+                <Layout>
+                  <Component {...pageProps}/>
+                </Layout>
+              </Shell>
+            </SnackbarProvider>
+          </MUI>
+        </Provider>
       </Container>
     )
   }

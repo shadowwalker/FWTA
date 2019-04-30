@@ -29,11 +29,13 @@ type Props = {
 
 const NavBar = ({}: Props) => {
   const classes = useStyles()
-  const [value, setValue] = useState('')
-  
+  const [value, setValue] = useState(Router.pathname)
+
   const handleChange = (event, value) => {
-    setValue(value)
-    Router.replace(`/${value}`)
+    if (value !== 'new') {
+      setValue(value)
+      Router.replace(`${value}`)
+    }
   }
 
   return (
@@ -44,11 +46,11 @@ const NavBar = ({}: Props) => {
         showLabels
         className={classes.nav}
       >
-        <BottomNavigationAction disableRipple label='首页' value='' icon={<HomeRounded />} />
-        <BottomNavigationAction disableRipple label='发现' value='explore' icon={<ExploreRounded />} />
+        <BottomNavigationAction disableRipple label='首页' value='/' icon={<HomeRounded />} />
+        <BottomNavigationAction disableRipple label='发现' value='/explore' icon={<ExploreRounded />} />
         <BottomNavigationAction disableRipple value='new' icon={<AddBoxRounded htmlColor='#7cb342' fontSize='large' />} />
-        <BottomNavigationAction disableRipple label='动态' value='feed' icon={<PeopleOutlineRounded />} />
-        <BottomNavigationAction disableRipple label='我的' value='me' icon={<PermIdentityRounded />} />
+        <BottomNavigationAction disableRipple label='动态' value='/feed' icon={<PeopleOutlineRounded />} />
+        <BottomNavigationAction disableRipple label='我的' value='/user' icon={<PermIdentityRounded />} />
       </BottomNavigation>
     </Paper>
   )

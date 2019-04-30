@@ -2,6 +2,9 @@ import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
 import { MuiStyles } from 'next-mui'
 
+const APP_NAME = 'FWTA'
+const APP_DESCRIPTION = 'FWTA is a project embraces the vision to create cross-platform mobile first applications using morden web technologies and best practices.'
+
 export default class extends Document {
   static async getInitialProps(ctx) {
     const page = ctx.renderPage()
@@ -16,11 +19,11 @@ export default class extends Document {
     return (
       <html lang='en' dir='ltr'>
         <Head>
-          <meta name='application-name' content='FWTA' />
+          <meta name='application-name' content={APP_NAME} />
           <meta name='apple-mobile-web-app-capable' content='yes' />
           <meta name='apple-mobile-web-app-status-bar-style' content='default' />
-          <meta name='apple-mobile-web-app-title' content='FWTA' />
-          <meta name='description' content='FWTA is a project embraces the vision to create cross-platform mobile first applications using morden web technologies and best practices.' />
+          <meta name='apple-mobile-web-app-title' content={APP_NAME} />
+          <meta name='description' content={APP_DESCRIPTION} />
           <meta name='format-detection' content='telephone=no' />
           <meta name='mobile-web-app-capable' content='yes' />
           <meta name='msapplication-config' content='/static/icons/browserconfig.xml' />
@@ -39,14 +42,14 @@ export default class extends Document {
      
           <meta name='twitter:card' content='summary' />
           <meta name='twitter:url' content='https://fwta.weiw.io' />
-          <meta name='twitter:title' content='FWTA' />
-          <meta name='twitter:description' content='FWTA is a project embraces the vision to create cross-platform mobile first applications using morden web technologies and best practices.' />
+          <meta name='twitter:title' content={APP_NAME} />
+          <meta name='twitter:description' content={APP_DESCRIPTION} />
           <meta name='twitter:image' content='https://fwta.weiw.io/static/icons/android-chrome-192x192.png' />
           <meta name='twitter:creator' content='@DavidWShadow' />
           <meta property='og:type' content='website' />
-          <meta property='og:title' content='FWTA' />
-          <meta property='og:description' content='FWTA is a project embraces the vision to create cross-platform mobile first applications using morden web technologies and best practices.' />
-          <meta property='og:site_name' content='FWTA' />
+          <meta property='og:title' content={APP_NAME} />
+          <meta property='og:description' content={APP_DESCRIPTION} />
+          <meta property='og:site_name' content={APP_NAME} />
           <meta property='og:url' content='https://fwta.weiw.io' />
           <meta property='og:image' content='https://fwta.weiw.io/static/icons/apple-touch-icon.png' />
           <style>{
